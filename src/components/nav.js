@@ -8,7 +8,7 @@ const Nav = () => {
                 to={'/'}
                 activeClassName="nav-active"
             >
-                Inicio
+                Calendario
             </Link>
             <Link
                 to={'/tabla-posiciones'}

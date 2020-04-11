@@ -3,24 +3,48 @@ import { graphql, useStaticQuery } from 'gatsby';
 const usePartidos = () => {
 
     const partidos = useStaticQuery(graphql`
-        query Partidos {
-            allWordpressWpPartido {
-            nodes {
+    query Calendario {
+        allWordpressWpPartido {
+        nodes {
+            acf {
+            fecha
+            dia_juego
+            local {
+                post_title
                 acf {
-                    local {
-                        post_title
-                    }
-                    goles_local
-                    visitante {
-                        post_title
-                    }
-                    goles_visitante
-                    yaJugado
+                escudo {
+                    localFile {
+                        childImageSharp {
+                            fluid {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
                     }
                 }
+                }
+            }
+            goles_local
+            visitante {
+                post_title
+                acf {
+                escudo {
+                    localFile {
+                    childImageSharp {
+                        fluid {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                    }
+                }
+                }
+            }
+            goles_visitante
+            yaJugado
             }
         }
-    `)
+        }
+    }
+`)
 
     return partidos;
 }

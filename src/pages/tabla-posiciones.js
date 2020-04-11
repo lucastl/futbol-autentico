@@ -6,7 +6,7 @@ import TablaPosiciones from '../components/tablaPosiciones';
 const TablaPosicionesPage = () => {
     return ( 
         <Layout>
-            <h1>Tabla posiciones</h1>
+            <h1 className="title-tabla-pos-page">Tabla posiciones</h1>
             <TablaPosiciones />
         </Layout>
      );

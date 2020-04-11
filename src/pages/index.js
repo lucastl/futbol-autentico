@@ -6,8 +6,7 @@ import CalendarioPartidos from '../components/calendarioPartidos';
 
 const IndexPage = () => (
   <Layout>
-    <h1>Fútbol Auténtico</h1>
-
+    <h2 className="title-league">Liga Deportiva del Sur</h2>
     <CalendarioPartidos />
   </Layout>
 )

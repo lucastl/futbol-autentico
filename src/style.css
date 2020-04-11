@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, figure {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    background: rgba(0,0,0,.85);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* HEADER */
+
+.header-primary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(100, 180, 103, 1);
+}
+
+.header-primary h1 {
+    color: rgba(255,255,255,.75);
+    text-shadow: 1px 1px 3px rgba(0,0,0,.2);
+    margin: 2vh 0;
+    font-size: 2.6em;
+}
+
+.header-primary nav {
+    display: flex;
+    justify-content: space-evenly;
+    background: rgba(0,0,0,.06);
+    padding: .5vh 0;
+}
+
+.header-primary nav a {
+    background: rgba(255,255,255,.2);
+    padding: 1vh 5vw;
+    border-radius: 1vh;
+    color: rgba(0,0,0,.4);
+}
+
+a.nav-active {
+    background: rgba(255,255,255,.5) !important;
+}
+
+
+
+/* /// */
+
+h2.title-league {
+    color: rgba(197, 86, 78, .8);
+    font-size: 1.2em;
+    margin-top: 4vh;
+    font-weight: 100;
+}
+
+h3.title-fechas {
+    color: rgba(100, 180, 103, .5);
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-top: 2vh;
+}
+
+
+
+
+nav.nav-fechas ul {
+    background: rgba(255,255,255,.95);
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    padding: 1vh 0;
+}
+
+
+nav.nav-fechas ul li {
+    width: 4vh;
+    height: 4vh;
+    line-height: 4vh;
+    border-radius: 100%;
+    background: rgba(0,0,0,.1);
+    font-size: .8em;
+    font-weight: 700;
+    color: rgba(0,0,0,.5);
+    cursor: pointer;
+}
+
+li.fecha-active {
+    background: rgba(0,0,0,.5) !important;
+    color: rgba(255,255,255,.75) !important;
+}
+
+
+
+section.partidos-wrap {
+    background: rgba(255,255,255,.9);
+    padding: 2vh;
+}
+
+
+
+article.partido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.club {
+    width: 40%;
+}
+
+.local {
+    position: relative;
+}
+
+
+.local:before {
+    content: 'Local';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(197, 86, 78, 1);
+    font-size: .6em;
+    color: rgba(255,255,255,.8);
+    text-transform: uppercase;
+    width: auto;
+    padding: 0.4vw .5vh;
+    z-index: 9;
+    border-radius: 3px;
+}
+
+.club h3 {
+    font-size: .9em;
+    font-weight: 700;
+    color: rgba(0,0,0,.6);
+}
+
+.gatsby-image-wrapper {
+    width: 50%;
+    margin: 1vh auto;
+}
+
+
+article.partido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh 0;
+}
+
+.scores {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scores small {
+    font-weight: 700;
+    font-size: 60%;
+    color: rgba(0,0,0,.3);
+}
+
+
+
+h1.title-tabla-pos-page {
+    color: rgba(100, 180, 103, .5);
+    text-transform: uppercase;
+    font-size: 2em;
+    margin: 4vh 0 4vh;
+}
+
+
+
+
+
+.scores span {
+    font-size: 2em;
+    color: rgba(0,0,0,.6);
+}
+
+.scores small {
+    font-weight: 700;
+    font-size: 60%;
+    color: rgba(0,0,0,.3);
+}
+
+
+
+h1.title-tabla-pos-page {
+    color: rgba(100, 180, 103, .5);
+    text-transform: uppercase;
+    font-size: 2em;
+    margin: 4vh 0 4vh;
+}
+
+
+section.tabla-pos-wrap table {
+    margin: 0 auto;
+    width: 95%;
+    border-collapse: collapse;
+}
+section.tabla-pos-wrap tbody tr {
+    width: 100%;
+    background: rgba(255,255,255,.9);
+}
+
+span.separator {
+    display: block;
+    height: 1vw;
+    padding: 1vw;
+    width: 100%;
+}
+
+section.tabla-pos-wrap table thead tr {
+    background: rgba(255,255,255,.95);
+    height: 5vh;
+    color: rgba(0,0,0,.6);
+}
+
+section.tabla-pos-wrap tbody tr td:nth-child(1) .gatsby-image-wrapper {
+    width: 30%;
+    margin-bottom: 2vh;
+}
+
+section.tabla-pos-wrap tbody tr td:nth-child(1) span {
+    margin: 2vh 0 1vw;
+    font-weight: 700;
+    font-size: .8em;
+    display: block;
+}

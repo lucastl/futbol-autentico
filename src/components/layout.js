@@ -1,33 +1,13 @@
 import React from 'react'
-import { Global, css } from '@emotion/core';
 import Helmet from 'react-helmet'
 import Header from './header'
+
+import '../style.css';
 
 const Layout = (props) => {
 
   return (
     <>
-
-      <Global
-        styles={css`
-        
-          * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-          }
-
-          body {
-            font-size: 16px;
-            font-family: 'Titillium Web', sans-serif;
-          }
-
-          ul {
-            list-style: none;
-          }
-
-        `}
-      />
     
       <Helmet>
         <title>Fútbol Autentico</title>

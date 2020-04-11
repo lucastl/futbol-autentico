@@ -125,13 +125,12 @@ const TablaPosiciones = () => {
 
     return (
         <>
-            <h2>Posiciones</h2>
             <section
-                className="partidos-wrap"
+                className="tabla-pos-wrap"
             >
                 <table>
 
-                    <tbody>
+                    <thead>
 
                         <tr>
                             <th>Club</th>
@@ -144,18 +143,29 @@ const TablaPosiciones = () => {
                             <th>Pts</th>
                         </tr>
 
+                    </thead>
+                    <tbody>
+
                         {
                             clubesFinal.map((club, i) => {
 
                                 return (
+                                    <>
                                     <tr
                                         key={i}
+                                        style={ i < 8 ? 
+                                            {
+                                                borderBottom: '1vw solid rgba(207, 172, 54, 1)'
+                                            }
+                                            : null }
                                     >
                                         <td>
+                                            <span>
+                                                {club.nombre}
+                                            </span>
                                             <Image
                                                 fluid={club.escudo}
                                             />
-                                            {club.nombre}
                                         </td>
                                         <td>{club.partidos.total}</td>
                                         <td>{club.partidos.ganados}</td>
@@ -165,6 +175,8 @@ const TablaPosiciones = () => {
                                         <td>{club.partidos.goles_recibidos}</td>
                                         <td>{club.puntos}</td>
                                     </tr>
+                                    <span className="separator"/>
+                                    </>
                                 )
 
                             })
