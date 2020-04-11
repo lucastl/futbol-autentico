@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Image from 'gatsby-image';
 
@@ -8,11 +8,22 @@ import useFechas from '../consultas/consultaFechas';
 const CalendarioPartidos = () => {
 
     const [currentFecha, setCurrentFecha] = useState(1)
+    const [enJuegoFecha, setEnJuegoFecha] = useState(1)
 
     const partidos = usePartidos();
     const fechas = useFechas();
 
     const { allWordpressWpPartido: { nodes } } = partidos;
+
+    let partidosJugados = nodes.filter(partido => partido.acf.yaJugado);
+    let getCurrentFecha = partidosJugados.sort((a, b) => a.fecha - b.fecha);
+
+    useEffect(() => {
+
+        setCurrentFecha(getCurrentFecha[0].acf.fecha);
+        setEnJuegoFecha(getCurrentFecha[0].acf.fecha);
+
+    }, [])
 
     return (
         <>
@@ -20,11 +31,11 @@ const CalendarioPartidos = () => {
             <nav className="nav-fechas">
                 <ul>
                     {
-                        fechas.allWordpressWpFechaCalendario.nodes.sort( (a, b) => a.name - b.name).map((fecha, i) => (
+                        fechas.allWordpressWpFechaCalendario.nodes.sort((a, b) => a.name - b.name).map((fecha, i) => (
 
                             <li
                                 key={i}
-                                className={ currentFecha == fecha.name ? 'fecha-active' : null}
+                                className={currentFecha == fecha.name ? 'fecha-active' : null}
                                 onClick={
                                     () => setCurrentFecha(fecha.name)
                                 }
@@ -62,7 +73,15 @@ const CalendarioPartidos = () => {
 
                                     </div>
 
-                                    <div className="scores">
+                                    <div
+                                        className={
+                                            partido.acf.yaJugado ?
+                                                'scores jugado'
+                                                : partido.acf.fecha < enJuegoFecha ?
+                                                    'scores pendiente'
+                                                    :
+                                                    'scores por-jugar'}
+                                    >
 
                                         <span className="goles-local">
                                             {partido.acf.goles_local}
