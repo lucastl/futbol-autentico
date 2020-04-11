@@ -20,7 +20,7 @@ const CalendarioPartidos = () => {
             <nav className="nav-fechas">
                 <ul>
                     {
-                        fechas.allWordpressWpFecha.nodes.map((fecha, i) => (
+                        fechas.allWordpressWpFechaCalendario.nodes.map((fecha, i) => (
 
                             <li
                                 key={i}
