@@ -4,7 +4,7 @@ const useFechas = () => {
 
     const fechas = useStaticQuery(graphql`
         query Fechas {
-            allWordpressWpFecha {
+            allWordpressWpFechaCalendario {
             nodes {
                 name
             }
