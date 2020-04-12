@@ -189,7 +189,6 @@ const TablaPosiciones = () => {
                                             {club.puntos}
                                         </td>
                                     </tr>
-                                    <span className="separator"/>
                                     </>
                                 )
 

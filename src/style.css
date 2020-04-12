@@ -288,12 +288,6 @@ section.tabla-pos-wrap tbody tr td:nth-child(1) span {
     font-size: 1.2em;
 }
 
-span.separator {
-    display: block;
-    height: 1vw;
-    padding: 1vw;
-    width: 100%;
-}
 
 section.tabla-pos-wrap table thead tr {
     background: rgba(255,255,255,.95);
