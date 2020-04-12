@@ -16,7 +16,7 @@ const Layout = (props) => {
       </Helmet>
 
       <Header />
-
+      <h2 className="title-league">Liga Deportiva del Sur</h2>
       {props.children}
 
     </>

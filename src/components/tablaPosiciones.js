@@ -133,6 +133,7 @@ const TablaPosiciones = () => {
                     <thead>
 
                         <tr>
+                            <th>Pos.</th>
                             <th>Club</th>
                             <th>PJ</th>
                             <th>PG</th>
@@ -157,8 +158,17 @@ const TablaPosiciones = () => {
                                             {
                                                 borderBottom: '1vw solid rgba(207, 172, 54, 1)'
                                             }
-                                            : null }
+                                            : 
+                                            {
+                                                borderBottom: '1px solid rgba(0,0,0,.1)'
+                                            }
+                                        }
                                     >
+                                        <td>
+                                            <span>
+                                            {i+1}
+                                            </span>
+                                        </td>
                                         <td>
                                             <span>
                                                 {club.nombre}
@@ -173,7 +183,11 @@ const TablaPosiciones = () => {
                                         <td>{club.partidos.perdidos}</td>
                                         <td>{club.partidos.goles_marcados}</td>
                                         <td>{club.partidos.goles_recibidos}</td>
-                                        <td>{club.puntos}</td>
+                                        <td
+                                            style={{ fontWeight: 700, fontSize: '1.2em', color: 'rgba(0,0,0,.65)' }}
+                                        >
+                                            {club.puntos}
+                                        </td>
                                     </tr>
                                     <span className="separator"/>
                                     </>

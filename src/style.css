@@ -71,28 +71,32 @@ h2.title-league {
 }
 
 h3.title-fechas {
-    color: rgba(100, 180, 103, .5);
+    color: rgba(100,180,103,.5);
     text-transform: uppercase;
     font-size: 2em;
-    margin-top: 2vh;
+    margin: 2vh 0;
 }
 
 
-
+nav.nav-fechas {
+    overflow: hidden;
+    overflow-x: scroll;
+    width: 100%;
+}
 
 nav.nav-fechas ul {
-    background: rgba(255,255,255,.95);
+    background: hsla(0,0%,100%,.95);
     display: flex;
     list-style: none;
     justify-content: space-evenly;
     padding: 1vh 0;
+    width: 200%;
 }
 
-
 nav.nav-fechas ul li {
-    width: 4vh;
-    height: 4vh;
-    line-height: 4vh;
+    width: 5vh;
+    height: 5vh;
+    line-height: 5vh;
     border-radius: 100%;
     background: rgba(0,0,0,.1);
     font-size: .8em;
@@ -110,7 +114,7 @@ li.fecha-active {
 
 section.partidos-wrap {
     background: rgba(255,255,255,.9);
-    padding: 2vh;
+    padding: 2vh 2vh 6vh;
 }
 
 
@@ -125,7 +129,7 @@ article.partido {
     width: 40%;
 }
 
-.local {
+/* .local {
     position: relative;
 }
 
@@ -144,7 +148,7 @@ article.partido {
     padding: 0.4vw .5vh;
     z-index: 9;
     border-radius: 3px;
-}
+} */
 
 .club h3 {
     font-size: .9em;
@@ -153,7 +157,7 @@ article.partido {
 }
 
 .gatsby-image-wrapper {
-    width: 50%;
+    width: 30%;
     margin: 1vh auto;
 }
 
@@ -162,7 +166,8 @@ article.partido {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3vh 0;
+    padding: 4vh 0;
+    border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 .scores {
@@ -179,12 +184,11 @@ article.partido {
 }
 
 
-
 h1.title-tabla-pos-page {
-    color: rgba(100, 180, 103, .5);
+    color: rgba(100,180,103,.5);
     text-transform: uppercase;
     font-size: 2em;
-    margin: 4vh 0 4vh;
+    margin: 2vh 0;
 }
 
 
@@ -256,6 +260,10 @@ h1.title-tabla-pos-page {
     margin: 4vh 0 4vh;
 }
 
+section.tabla-pos-wrap {
+    padding-bottom: 6vh;
+}
+
 
 section.tabla-pos-wrap table {
     margin: 0 auto;
@@ -265,6 +273,19 @@ section.tabla-pos-wrap table {
 section.tabla-pos-wrap tbody tr {
     width: 100%;
     background: rgba(255,255,255,.9);
+}
+
+section.tabla-pos-wrap tbody tr td:nth-child(1) span {
+    background: rgba(0,0,0,.6);
+    width: 5vh;
+    height: 5vh;
+    display: block;
+    border-radius: 100%;
+    margin: 0 auto;
+    color: rgba(255,255,255,.9);
+    line-height: 5vh;
+    font-weight: 700;
+    font-size: 1.2em;
 }
 
 span.separator {
@@ -280,12 +301,12 @@ section.tabla-pos-wrap table thead tr {
     color: rgba(0,0,0,.6);
 }
 
-section.tabla-pos-wrap tbody tr td:nth-child(1) .gatsby-image-wrapper {
+section.tabla-pos-wrap tbody tr td:nth-child(2) .gatsby-image-wrapper {
     width: 30%;
     margin-bottom: 2vh;
 }
 
-section.tabla-pos-wrap tbody tr td:nth-child(1) span {
+section.tabla-pos-wrap tbody tr td:nth-child(2) span {
     margin: 2vh 0 1vw;
     font-weight: 700;
     font-size: .8em;

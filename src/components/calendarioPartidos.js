@@ -7,7 +7,7 @@ import useFechas from '../consultas/consultaFechas';
 
 const CalendarioPartidos = () => {
 
-    const [currentFecha, setCurrentFecha] = useState(1)
+    const [currentFecha, setCurrentFecha] = useState()
     const [enJuegoFecha, setEnJuegoFecha] = useState(1)
 
     const partidos = usePartidos();
@@ -106,8 +106,6 @@ const CalendarioPartidos = () => {
                                     </div>
 
                                 </article>
-
-                                <hr />
 
                             </>
 
